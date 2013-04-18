@@ -1,0 +1,116 @@
+/*----------------------------------------------------------------------------------------------------------------*\
+    RESET
+\*----------------------------------------------------------------------------------------------------------------*/
+/*
+RESET
+*/
+
+:focus {
+    outline: 0;
+}
+
+/* ----- Forms ----- */
+input {
+	line-height: 1em;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/* ----- Cursors ----- */
+select {
+    cursor: pointer;
+}
+
+input, textarea {
+    cursor: text;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    DEFAULT TEXT
+\*----------------------------------------------------------------------------------------------------------------*/
+body {
+    background: #fff;
+    
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    
+    position: relative;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    FORM ELEMENTS
+\*----------------------------------------------------------------------------------------------------------------*/
+label {
+	width: 100%;
+	margin-bottom: 5px;
+	display: block;
+	
+	font-size: 0.8em;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+input, 
+textarea {
+	width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+    
+    background: #fff;
+    
+    font-size: 1em;
+}
+
+textarea {
+	height: 150px;
+}
+
+input:focus, 
+textarea:focus {
+    background: #fff;
+}
+
+select {
+	display: inline-block;
+}
+
+fieldset, legend {
+    border: 0;
+}
+
+fieldset {
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	
+	background: #f2f2f2;
+}
+
