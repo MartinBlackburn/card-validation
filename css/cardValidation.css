@@ -1,46 +1,4 @@
 /*----------------------------------------------------------------------------------------------------------------*\
-    RESET
-\*----------------------------------------------------------------------------------------------------------------*/
-:focus {
-    outline: 0;
-}
-
-/* ----- Forms ----- */
-input {
-	line-height: 1em;
-}
-
-input, select {
-    vertical-align: middle;
-}
-
-/* ----- Cursors ----- */
-select {
-    cursor: pointer;
-}
-
-input, textarea {
-    cursor: text;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    cursor: pointer;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box; 
-}
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------------------*\
     DEFAULT TEXT
 \*----------------------------------------------------------------------------------------------------------------*/
 body {
@@ -61,6 +19,18 @@ body {
 /*----------------------------------------------------------------------------------------------------------------*\
     FORM ELEMENTS
 \*----------------------------------------------------------------------------------------------------------------*/
+fieldset, legend {
+    border: 0;
+}
+
+fieldset {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+    background: #f2f2f2;
+}
+
 label {
 	width: 100%;
 	margin-bottom: 5px;
@@ -71,42 +41,36 @@ label {
 	font-weight: bold;
 }
 
-input, 
-textarea {
+input {
 	width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 15px;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     
     background: #fff;
     
     font-size: 1em;
+    line-height: 1em;
+    
+    cursor: text;
 }
 
-textarea {
-	height: 150px;
-}
-
-input:focus, 
-textarea:focus {
+input:focus {
     background: #fff;
+    
+    outline: 0;
 }
 
 select {
 	display: inline-block;
-}
-
-fieldset, legend {
-    border: 0;
-}
-
-fieldset {
-	padding: 15px;
-	border-radius: 5px;
-	margin-bottom: 20px;
+	vertical-align: middle;
 	
-	background: #f2f2f2;
+	cursor: pointer;
 }
 
+select:focus {
+    outline: 0;
+}
