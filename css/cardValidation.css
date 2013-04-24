@@ -1,7 +1,47 @@
 /*----------------------------------------------------------------------------------------------------------------*\
+    BASIC RESET - please use a better one in production
+\*----------------------------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #333;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+.pageContainer {
+	max-width: 400px;
+    margin: 0 auto;
+}
+
+.form {
+	border-radius: 5px;
+	padding: 15px 15px 0 15px;
+	
+	background: #f2f2f2;
+}
+
+.textContainer {
+    padding-top: 20px;
+    
+    text-align: center;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
     DEFAULT TEXT
 \*----------------------------------------------------------------------------------------------------------------*/
 body {
+	padding-top: 20px;
+	
     background: #fff;
     
     color: #333;
@@ -12,6 +52,10 @@ body {
     position: relative;
 }
 
+.cardType {
+	margin-bottom: 15px;
+}
+
 
 
 
@@ -19,33 +63,21 @@ body {
 /*----------------------------------------------------------------------------------------------------------------*\
     FORM ELEMENTS
 \*----------------------------------------------------------------------------------------------------------------*/
-fieldset, legend {
-    border: 0;
-}
-
-fieldset {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    
-    background: #f2f2f2;
-}
-
 label {
 	width: 100%;
 	margin-bottom: 5px;
 	display: block;
 	
-	font-size: 0.8em;
+	font-size: 1em;
 	line-height: 1em;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 input {
 	width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 3px;
     margin-bottom: 15px;
     display: inline-block;
     vertical-align: middle;
@@ -65,6 +97,7 @@ input:focus {
 }
 
 select {
+	margin-bottom: 15px;
 	display: inline-block;
 	vertical-align: middle;
 	
