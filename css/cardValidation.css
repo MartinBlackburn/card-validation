@@ -90,6 +90,11 @@ input {
     cursor: text;
 }
 
+input.valid,
+input:focus.valid {
+	background: #C7F2C8;
+}
+
 input:focus {
     background: #fff;
     

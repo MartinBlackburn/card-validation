@@ -87,7 +87,15 @@
         </div>
     </div>
     
-    <!-- Fader -->
+    <!-- Card validation -->
     <script src="js/cardValidation.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(function() 
+        {
+            //validate card number
+            new ValidateCardNumber($(".cardNumber"), 1000);
+        });
+    </script>
 </body>
 </html>
