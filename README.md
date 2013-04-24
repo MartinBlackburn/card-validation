@@ -13,28 +13,22 @@ It is NOT designed to replace your usual card validation.
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 ```
 
-2. Add the JS and CSS. E.G:
+2. Add the JS:
 ```html
-    <!-- Put these into the <head> -->
+    <!-- Put this into the <head> -->
     <script src="js/cardValidation.js"></script>
-    <link rel="stylesheet" href="css/cardValidation.css">
 ```
 
-3. Add markup:
-```html
-```
-
-4. Setup the card validation:
+3. Setup the card validation:
 ```html
     <!-- Put this right before the </body> closing tag -->
     <script>
         $(function() 
         {
-            //check card details on each form
-            $(".cardVaidationForm").each(function()
-            {
-                new CardValidation($(this));
-            });
+            //validate card number, pass card number input and time delay before checking
+            new ValidateCardNumber($(".cardNumber"), 1000);
         });
     </script>
 ```
+
+Now when a user types in their card number it will give the input the class "valid" when a valid card number is entered.
