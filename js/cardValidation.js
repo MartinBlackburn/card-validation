@@ -21,10 +21,8 @@ ValidateCardNumber = function(input, delay)
         //strip all non-numeric characters
         cardNumber = cardNumber.replace(/[^\d]/g, '');
         
-        //check card number passes Luhn validation
-        var check1 = checkLuhn(cardNumber);
-        
-        if(check1)
+        //check card number passes validation        
+        if(checkLuhn(cardNumber) && checkDigits(cardNumber))
         {
             input.addClass("valid");
         } else {
@@ -55,5 +53,13 @@ ValidateCardNumber = function(input, delay)
         }
         
         return (sum % 10) == 0;
+    }
+    
+    
+    function checkDigits(cardNumber)
+    {
+        var length = cardNumber.length;
+        
+        return (length > 9);
     }
 };
