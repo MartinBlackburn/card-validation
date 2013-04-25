@@ -8,9 +8,6 @@
     <!-- Site CSS -->
     <link href="css/cardValidation.css" rel="stylesheet" type="text/css" media="screen" />
     
-    <!-- JS Lib -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    
     <!--  Analytics 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -36,7 +33,7 @@
 			<input type="text" name="cardName" />
 			
 			<label>Card number</label>
-			<input class="cardNumber" type="text" name="cardNumber" />
+			<input id="cardNumber" type="text" name="cardNumber" />
 			
 			<label>Expiry date</label>
 			<select name="cardExpiryMonth">
@@ -91,11 +88,8 @@
     <script src="js/cardValidation.js" type="text/javascript"></script>
     
     <script type="text/javascript">
-        $(function() 
-        {
-            //validate card number
-            new ValidateCardNumber($(".cardNumber"), 1000);
-        });
+	    //validate card number, pass card number field ID and time delay before checking
+	    new ValidateCardNumber("cardNumber", 1000);
     </script>
 </body>
 </html>

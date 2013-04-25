@@ -1,32 +1,33 @@
-ValidateCardNumber = function(input, delay) 
+ValidateCardNumber = function(inputID, delay) 
 {   
     //variables
     var checkDelay = (typeof delay != "number") ? 1000 : delay;
     var timer;
+    var input = document.getElementById(inputID);
     
-    input.on("keyup", function(event) 
+    input.onkeyup = function(e)
     {       
         clearTimeout(timer);
         
         timer = setTimeout(isValid, checkDelay);
-    });
+    };
     
     
     //is card number valid
     function isValid()  
     {   
         //get entered card number
-        var cardNumber = input.val();
+        var cardNumber = input.value;
         
         //strip all non-numeric characters
         cardNumber = cardNumber.replace(/[^\d]/g, '');
         
-        //check card number passes validation        
+        //check card number passes validation and add / remove 'valid' class     
         if(checkLuhn(cardNumber) && checkDigits(cardNumber))
         {
-            input.addClass("valid");
+            input.className += "valid";
         } else {
-            input.removeClass("valid");
+            input.className = input.className.replace(/(?:^|\s)valid(?!\S)/g , '');
         }
     } 
     
