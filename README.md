@@ -29,3 +29,5 @@ It is NOT designed to replace your usual card validation.
 ```
 
 Now when a user types in their card number it will give the input the class "valid" when a valid card number is entered.
+
+[View it in action here](http://martinblackburn.github.com/card-validation/)
