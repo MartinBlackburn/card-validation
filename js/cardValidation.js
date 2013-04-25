@@ -59,7 +59,8 @@ ValidateCardNumber = function(inputID, delay)
     
     function checkDigits(cardNumber)
     {
-        var length = cardNumber.length;
+        cardNumber = cardNumber.replace(/[^\d]/g, '');
+        var length = cardNumber.length;        
         
         return (length > 9);
     }
