@@ -15,15 +15,15 @@
 }
 
 .pageContainer {
-	max-width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 .form {
-	border-radius: 5px;
-	padding: 15px 15px 0 15px;
-	
-	background: #f2f2f2;
+    border-radius: 5px;
+    padding: 15px 15px 0 15px;
+    
+    background: #f2f2f2;
 }
 
 .textContainer {
@@ -40,8 +40,8 @@
     DEFAULT TEXT
 \*----------------------------------------------------------------------------------------------------------------*/
 body {
-	padding-top: 20px;
-	
+    padding-top: 20px;
+    
     background: #fff;
     
     color: #333;
@@ -53,7 +53,7 @@ body {
 }
 
 .cardType {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -64,17 +64,17 @@ body {
     FORM ELEMENTS
 \*----------------------------------------------------------------------------------------------------------------*/
 label {
-	width: 100%;
-	margin-bottom: 5px;
-	display: block;
-	
-	font-size: 1em;
-	line-height: 1em;
-	font-weight: normal;
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+    
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: normal;
 }
 
 input {
-	width: 100%;
+    width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -92,7 +92,12 @@ input {
 
 input.valid,
 input:focus.valid {
-	background: #C7F2C8;
+    background: #C7F2C8;
+}
+
+input.notValid,
+input:focus.notValid {
+    background: #F78181;
 }
 
 input:focus {
@@ -102,11 +107,11 @@ input:focus {
 }
 
 select {
-	margin-bottom: 15px;
-	display: inline-block;
-	vertical-align: middle;
-	
-	cursor: pointer;
+    margin-bottom: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    
+    cursor: pointer;
 }
 
 select:focus {
