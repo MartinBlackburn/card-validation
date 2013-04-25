@@ -95,6 +95,11 @@ input:focus.valid {
 	background: #C7F2C8;
 }
 
+input.notValid,
+input:focus.notValid {
+    background: #F78181;
+}
+
 input:focus {
     background: #fff;
     

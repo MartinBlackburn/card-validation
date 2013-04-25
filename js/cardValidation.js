@@ -22,12 +22,14 @@ ValidateCardNumber = function(inputID, delay)
         //strip all non-numeric characters
         cardNumber = cardNumber.replace(/[^\d]/g, '');
         
-        //check card number passes validation and add / remove 'valid' class     
+        //check card number passes validation and add / remove 'valid'/ 'notValid' classes     
         if(checkLuhn(cardNumber) && checkDigits(cardNumber))
         {
-            input.className += "valid";
+            removeClass(input, "notValid");
+            addClass(input, "valid");
         } else {
-            input.className = input.className.replace(/(?:^|\s)valid(?!\S)/g , '');
+            removeClass(input, "valid");
+            addClass(input, "notValid");
         }
     } 
     
@@ -63,5 +65,30 @@ ValidateCardNumber = function(inputID, delay)
         var length = cardNumber.length;        
         
         return (length > 9);
+    }
+    
+    //does the element have the class?
+    function hasClass(element, className) {
+        return new RegExp('(\\s|^)' + className + '(\\s|$)').test(element.className);
+    }
+    
+    
+    //add class to element if it doesnt already have it
+    function addClass(element, className)
+    {
+        if (!hasClass(element, className)) {
+            element.className += ' ' + className;
+        }
+    }
+    
+    
+    //remove class if the element has it
+    function removeClass(element, className)
+    {
+        if (hasClass(element, className))
+        {
+            var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+            element.className = element.className.replace(reg, ' ');
+        }
     }
 };
